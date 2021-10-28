@@ -1,4 +1,4 @@
-const SEARCH_SERVICE = `   `;
+const SEARCH_SERVICE = `http://localhost/projects/Busqueda-empresarial/Server/services/queryService.php`;
 const STORE_SERVICE = `http://localhost/projects/Busqueda-empresarial/Server/services/storeService.php`;
 
 const SEARCH_INPUT = document.getElementById("SearchInput");

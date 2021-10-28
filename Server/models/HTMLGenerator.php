@@ -20,7 +20,7 @@ class HTMLGenerator
             $template.= '<td>'.$item['titulo'] .'</td>';
             $template.= '<td>'.$item['snipped'] .'</td>';
             $template.= '<td>'.$item['score'] .'</td>';
-            $template.= '<td> <a href="'.$item['link'].'"target="_blank">Descargar</a></td>';
+            $template.= '<td> <a href="../Server/documents/'.$item['titulo'].'"target="_blank" download='. $item['titulo'] .'>Descargar</a></td>';
             $template .= '</tr>';
          }
          $template .= '

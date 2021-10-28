@@ -1,18 +1,13 @@
 <?php 
 class QueryCreator
 {
-    private $stringquery;
 
-    public function __construct($rawQuery) {
-
-        $this->stringquery = $rawQuery;
-    }
-
-    public function builder()
+    public function builder($rawQuery)
     {
-        
-        
-    
+
+        $QueryStatement = "SELECT titulo,snipped,content, MATCH(content) AGAINST('\"$rawQuery\"' IN BOOLEAN MODE) AS score FROM documents WHERE MATCH(content) AGAINST ('\"$rawQuery\"' IN BOOLEAN MODE) ORDER BY score DESC";
+
+        return $QueryStatement;
     }
 }
 
